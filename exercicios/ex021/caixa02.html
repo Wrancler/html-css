@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+
+        }
+        header {
+            padding: 10px;
+            margin: 10px;
+            background-color:aliceblue;
+            border-radius: 10px 30px;
+           
+        }
+
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+           
+        }
+        nav > a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: aliceblue;
+            padding: 10px;
+            margin: 10px;  
+            border-radius: 10px 0px; 
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+            
+        }
+
+        article > aside {
+            background-color: rgb(165, 165, 165);
+        }
+
+        footer {
+            background-color: rgb(56, 54, 54);
+            color: aliceblue;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+           margin: 0px; 
+        }
+
+        div#bola {
+
+            background-color: aliceblue;
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            border-radius: 50%;
+            box-shadow: inset 10px 10px 10px 20px rgba(218, 121, 209, 0.459);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float{
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-25px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+
+            /*
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: aliceblue;
+            border-radius: 40%; */
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>  
+    <main>
+        <section id="assuntos">
+            <p>Esportes, Políticas e Tecnologias</p>
+            <article>Olá</article>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil nostrum aliquam consequatur dolorum, culpa voluptatum inventore eaque dicta quos exercitationem, vero deleniti odio numquam accusamus recusandae voluptatem tenetur dolores.</p>
+                <aside>
+                    <p>Artigo escrito por Wrancler Nascimento</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+
+    </main>   
+    <footer>
+        <p>Desenvolvido por Wrancler</p>
+    </footer>  
+    <div id="bola"></div>
+</body>
+</html>
