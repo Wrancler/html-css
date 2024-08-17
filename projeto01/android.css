@@ -12,7 +12,7 @@
     --cor2: #3ddc84;
     --cor03:#2fa866;
     --cor04:#1a5c37;
-    --cor05: #063d1e;
+    --cor05:#063d1e;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
@@ -90,8 +90,8 @@ main {
     margin: auto;
     margin-bottom: 30px;
 
-    min-width: 280px;
-    max-width: 800px;
+    min-width: 300px;
+    max-width: 1000px;
 
     padding: 15px;
 
@@ -100,21 +100,25 @@ main {
     border-bottom-right-radius: 10px;  
 }
 
-main h1 {
+article h1 {
     color: var(--cor05);
     font-weight: normal;
+
     font-family: var(--font-android);
     font-size: 2em;
 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.313);
     text-align: center;
-    
     
 }
 
-main h2 {
+article h2 {
+    color: var(--cor04);
     background-image: linear-gradient(to right, #83e1ad, transparent);
     font-family: var(--font-android);
-
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.313);
+    padding-left: 10px;
+    border-radius: 7px;
 }
 
 main p {
@@ -142,10 +146,10 @@ main a {
 }
 
 main a:hover {
-    text-decoration: underline;
+
     background-color: var(--cor0);
     transition-duration: 0.5s;
-    padding: 2px;
+    padding: 3px;
 }
 
 div.video {
