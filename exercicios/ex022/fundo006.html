@@ -6,24 +6,33 @@
     <title>Document</title>
     <style>
         body {
+            /*
             height: 100vh;
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-size: cover;
-            /*background-size: auto > navegador se vira automaticamente / 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            */
+
+             /*background-size: auto > navegador se vira automaticamente / 
             contain > mostrar 100% da imagem sem cortes / 
             cover > 100% da vh com cortes*/
-            background-repeat: repeat-y;
-            background-position: top center;
 
+            /* 
+            background: color > image > position > repeat > size attachment
+            */
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
 
-        main {
+        main { 
             color: white;
             text-shadow: 2px 2px 7px black;
             background-image: url('imagens/pattern004.png');
-            width: 400px;
-            padding: 14px;
+            max-width: 400px;
+            padding: 10px;
             margin: auto;
             border-radius: 10px;
             border: 1px solid darkblue;
