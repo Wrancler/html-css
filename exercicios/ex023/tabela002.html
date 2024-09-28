@@ -16,12 +16,17 @@
 
         td, th { 
             border: 1px solid black;
-            padding: 10px;
-            
+            padding: 10px;    
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #3b3b3b;
         }
 
         thead, tfoot {
-            background-color: rgb(59, 59, 59);
+            background-color: #3b3b3b;
             color: white;
         }
         
@@ -37,6 +42,7 @@
             font-size: 1.5em;
             font-weight: bold;
             padding: 8px;
+            background-color: lightgray
         }
     </style>
 </head>
@@ -44,6 +50,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES
+        CAPTION
         TABLE
             THEAD
                 TR, TD, TH
