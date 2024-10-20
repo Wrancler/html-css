@@ -21,7 +21,7 @@
 }
 
 body {
-    background-image: linear-gradient(to left, #f7d2b6, #f1c19c, #f5b07b);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.247));
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -34,7 +34,7 @@ body.hovered {
 }
 
 header {
-    background: #fff;
+    background: #ffffff96;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
