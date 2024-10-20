@@ -16,7 +16,7 @@
         <section class="intro">
             <h2>Quem sou eu?</h2>     
             <div class="image-container">
-                <img src="imagens/jeni2-red.png" alt="Jenifer" class="img-fot" id="imagem-troca">
+                <img src="imagens/jeni-red.png" alt="Jenifer" class="img-fot" id="imagem-troca">
             </div>
             <p>Olá, meu nome é Jenifer, tenho 21 anos e sou apaixonada por maquiagem! Desde pequena, sempre amei transformar e realçar a beleza das pessoas ao meu redor. Hoje, compartilho essa paixão através do meu perfil de maquiagem, onde você encontrará dicas e inspirações para arrasar. &#128522; &#10084;</p>
             <h3>Lembre-se: a maquiagem é uma forma de expressão, e estou aqui para ajudar você a brilhar! ✨💖</h3>
@@ -42,16 +42,35 @@
     <script>
         const img = document.getElementById('imagem-troca');
         const originalSrc = img.src;
-        const hoverSrc = 'imagens/jeni-red.png';
-
+        const hoverSrc = 'imagens/jeni2-red.png';
+        let isHovered = false;
+    
         img.addEventListener('mouseover', function() {
-            document.body.classList.add('hovered');
-            this.src = hoverSrc;
+            if (window.innerWidth > 768) { // Para computadores
+                document.body.classList.add('hovered');
+                this.src = hoverSrc;
+                isHovered = true;
+            }
         });
-
+    
         img.addEventListener('mouseout', function() {
-            document.body.classList.remove('hovered');
-            this.src = originalSrc;
+            if (window.innerWidth > 768) { // Para computadores
+                document.body.classList.remove('hovered');
+                this.src = originalSrc;
+                isHovered = false;
+            }
+        });
+    
+        img.addEventListener('click', function() {
+            if (isHovered) {
+                this.src = originalSrc;
+                document.body.classList.remove('hovered');
+                isHovered = false;
+            } else {
+                this.src = hoverSrc;
+                document.body.classList.add('hovered');
+                isHovered = true;
+            }
         });
     </script> 
 </body>
