@@ -17,7 +17,7 @@
 
 body {
     /* background-image: url('imagens/pattern003.png');*/
-    background-image: linear-gradient(to left, #f7d2b6, #f1c19c, #f5b07b98);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.603));
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -26,7 +26,7 @@ body {
 }
 
 body.hovered {
-    background-image: linear-gradient(to right, #ABBDCF, #7B99B9, #707772);
+    background-image: linear-gradient(to right, #ABBDCF, #7B99B9, #7B99B9);
 }
 
 header {
@@ -42,12 +42,12 @@ h1 {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
-    color: #333;
+    color: #179fb1;
     transition: color 0.3s ease;
 }
 
 h1:hover {
-    color: #f0b68a;
+    color: black;
 }
 
 h2 {
