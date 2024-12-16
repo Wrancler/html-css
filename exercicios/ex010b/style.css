@@ -16,7 +16,8 @@
 }
 
 body {
-    background-image: linear-gradient(to left, #f7d2b6, #f1c19c, #f5b07b);
+    /* background-image: url('imagens/pattern003.png');*/
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.603));
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -25,7 +26,7 @@ body {
 }
 
 body.hovered {
-    background-image: linear-gradient(to right, #ABBDCF, #7B99B9, #707772);
+    background-image: linear-gradient(to right, #ABBDCF, #7B99B9, #7B99B9);
 }
 
 header {
@@ -33,6 +34,7 @@ header {
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    border-radius: 20px 0px 20px 0px;
 }
 
 h1 {
@@ -40,12 +42,12 @@ h1 {
     font-size: 3em;
     font-weight: normal;
     margin: 0;
-    color: #333;
+    color: #117380;
     transition: color 0.3s ease;
 }
 
 h1:hover {
-    color: #f0b68a;
+    color: black;
 }
 
 h2 {
@@ -65,11 +67,13 @@ h3 {
 
 p {
     font-family: 'Berkshire Swash', Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 1.6;
     color: #555;
     margin: 0 20px 20px;
 }
+
+
 
 ul {
     list-style: none;
