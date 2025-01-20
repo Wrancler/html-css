@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Apostas</title>
+  <link rel="stylesheet" href="aposta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <h1 class="logo">Plataforma de Apostas</h1>
+      <nav class="saldo">
+        <span id="saldo-usuario">Saldo: R$100,00</span>
+        <button id="adicionar-fundos">Adicionar Fundos</button>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="conteudo-principal">
+    <div class="container">
+      <section class="jogo">
+        <h2>Jogo da Roleta</h2>
+        <div class="controles-jogo">
+          <input type="number" id="valor-aposta" placeholder="Insira o valor da aposta" min="1">
+          <button id="girar-roleta">Girar Roleta</button>
+        </div>
+        <p id="mensagem-resultado" class="mensagem-resultado"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2025 Plataforma de Apostas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="aposta.js"></script>
+</body>
+</html>
