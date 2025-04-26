@@ -219,11 +219,13 @@ footer a::after {
 
 .imagem-dri {
     width: 80%;
+    max-width: 100%;
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Quando o mouse passar sobre a imagem, ela vai dar um leve zoom */
 #imagem-dri-img {
     cursor: pointer;
 }
@@ -233,6 +235,10 @@ footer a::after {
     transition: transform 0.3s ease-in-out;
 }
 
-#imagem-dri {
-    display: none;
+/* Responsividade para dispositivos móveis */
+@media (max-width: 670px) {
+    .imagem-dri {
+        width: 100%; /* A imagem ocupa toda a largura disponível em telas pequenas */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
 }
