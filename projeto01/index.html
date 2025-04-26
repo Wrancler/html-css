@@ -12,6 +12,13 @@
     if (imagem) {
         imagem.classList.toggle("mostrar");
     }
+
+    // Quando a página for carregada ou um evento ocorrer
+window.onload = () => {
+    const imagem = document.querySelector('.imagem-dri');
+    imagem.classList.add('mostrar');  // Aplica a classe 'mostrar' para exibir a imagem
+};
+
 }
 
     </script>

@@ -31,7 +31,6 @@ body {
 
 a.externo::after {
     content: '\00A0\1F517';
-
 }
 
 header {
@@ -39,7 +38,6 @@ header {
     min-height: 150px;
     text-align: center;   
     padding-top: 40px;
-    
 }
 
 header > h1 {
@@ -56,11 +54,9 @@ header > p {
     font-size: 1.2em;
     color: white;
     max-width: 600px;
-
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 25px;
-
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
@@ -89,12 +85,9 @@ main {
     background-color: white;
     margin: auto;
     margin-bottom: 30px;
-
     min-width: 300px;
     max-width: 1000px;
-
     padding: 15px;
-
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.418);
     border-bottom-left-radius: 10px; 
     border-bottom-right-radius: 10px;  
@@ -103,13 +96,10 @@ main {
 article h1 {
     color: var(--cor05);
     font-weight: normal;
-
     font-family: var(--font-android);
     font-size: 2em;
-
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.313);
     text-align: center;
-    
 }
 
 article h2 {
@@ -146,7 +136,6 @@ main a {
 }
 
 main a:hover {
-
     background-color: var(--cor0);
     transition-duration: 0.5s;
     padding: 3px;
@@ -209,7 +198,6 @@ footer > a {
     color: white;
     font-weight: bolder;
     text-decoration: none;
-
 }
 
 footer > a:hover {
@@ -232,7 +220,6 @@ footer > a:hover {
 #ultimo {
     text-align: center;
     font-size: 0.9em;
-
 }
 
 #lucas-frango:hover {
@@ -242,12 +229,23 @@ footer > a:hover {
 }
 
 
-/* Efeito inicial para a imagem (sem desfoque) */
+/* Estilo básico para a imagem */
+.imagem-dri {
+    display: none;  /* A imagem está oculta inicialmente */
+    position: relative;
+    width: 80%;
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Efeito inicial para a imagem (com desfoque) */
 .imagem-dri-img {
     width: 100%;
     border-radius: 15px;
     opacity: 0;
     transform: scale(0.9);
+    filter: blur(5px);  /* Aplica o desfoque inicial */
     transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
 }
 
@@ -256,13 +254,16 @@ footer > a:hover {
     display: block;  /* Torna a imagem visível */
 }
 
+/* Ao mostrar a imagem, o desfoque vai ser removido ao final da transição */
 .imagem-dri.mostrar .imagem-dri-img {
     opacity: 1;
     transform: scale(1);
     filter: blur(0);  /* Remove o desfoque */
 }
 
-/* Aplica o desfoque apenas no momento de entrada com zoom */
-.imagem-dri.mostrar .imagem-dri-img {
-    filter: blur(5px); /* Aplica o desfoque inicial durante a transição */
+/* Efeito hover: Ao passar o mouse sobre a imagem, ela faz um zoom */
+.imagem-dri-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
