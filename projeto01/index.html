@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="android.css">
     <script>
         function mostrarImagem() {
-            const imagem = document.getElementById("imagem-dri");
-            imagem.classList.toggle("mostrar");  // Altera a visibilidade da imagem
-        }
+    const imagem = document.getElementById("imagem-dri");
+    if (imagem) {
+        imagem.classList.toggle("mostrar");
+    }
+}
+
     </script>
 </head>
 <body>
