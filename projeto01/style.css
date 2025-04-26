@@ -217,28 +217,51 @@ footer a::after {
     content: var();
 }
 
+/* Estilo básico para a imagem */
 .imagem-dri {
+    display: none;
+    position: relative;
     width: 80%;
     max-width: 100%;
-    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Efeito inicial para a imagem */
+.imagem-dri-img {
+    width: 100%;
+    border-radius: 15px;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Quando o mouse passar sobre a imagem, ela vai dar um leve zoom */
-#imagem-dri-img {
-    cursor: pointer;
+/* Efeito de transição quando a imagem aparece */
+.imagem-dri.mostrar .imagem-dri-img {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0); /* Remove o desfoque */
 }
 
-#imagem-dri-img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+/* Efeito de entrada com zoom e desfoque */
+.imagem-dri.mostrar .imagem-dri-img {
+    filter: blur(5px); /* Aplica um desfoque inicial */
 }
 
-/* Responsividade para dispositivos móveis */
+/* Efeito hover: Ao passar o mouse sobre a imagem, ela faz um zoom */
+.imagem-dri-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito responsivo para telas pequenas */
 @media (max-width: 670px) {
     .imagem-dri {
-        width: 100%; /* A imagem ocupa toda a largura disponível em telas pequenas */
-        margin: 0 auto; /* Centraliza a imagem */
+        width: 95%; /* A imagem ocupa mais da tela em dispositivos menores */
+    }
+
+    .imagem-dri-img {
+        border-radius: 10px;
     }
 }
